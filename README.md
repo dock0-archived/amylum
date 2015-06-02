@@ -1,25 +1,23 @@
-dock0/committed
+dock0/amylum
 =======
 
-[![Automated Build](http://img.shields.io/badge/automated-build-green.svg)](https://registry.hub.docker.com/u/dock0/committed/)
+[![Automated Build](http://img.shields.io/badge/automated-build-green.svg)](https://registry.hub.docker.com/u/dock0/amylum/)
 [![MIT Licensed](http://img.shields.io/badge/license-MIT-green.svg)](https://tldrlegal.com/license/mit-license)
 
-Container to run [committed](https://github.com/akerl/committed), a Twilio endpoint for checking GitHub commit streak status
+Container for [my Arch package repo](https://github.com/amylum/server).
 
 ## Usage
 
 ```
-docker pull dock0/committed
-docker run -d -p 80:80 dock0/committed
+cat > env_file <<EOF
+AWS_ACCESS_KEY_ID=your-access-key
+AWS_SECRET_ACCESS_KEY=your-secret-key
+AWS_REGION=your-region
+S3_BUCKET=your-bucket-name
+EOF
+docker pull dock0/amylum
+docker run -d -p 80:80 dock0/amylum
 ```
-
-If you want it to support registration (remembering which user texts from which phone number), set COMMITTED_DB to true and set REDIS_URL such that Redis is accessible:
-
-```
-docker run -d -p 80:80 -e COMMITTED_DB=true -e "REDIS_URL=redis://user:password@host:port/db" dock0/committed
-```
-
-I'd recommend using [dock0/redis](https://github.com/dock0/redis), but I'll admit to being a bit biased.
 
 ## License
 
