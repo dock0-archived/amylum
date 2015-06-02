@@ -16,7 +16,7 @@ AWS_REGION=your-region
 S3_BUCKET=your-bucket-name
 EOF
 docker pull dock0/amylum
-docker run -d -p 80:80 dock0/amylum
+docker run -d -p 80:80 --env-file=env_file dock0/amylum
 ```
 
 ## License
