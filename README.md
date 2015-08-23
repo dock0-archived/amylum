@@ -16,12 +16,13 @@ AWS_REGION=your-region
 S3_BUCKET=your-bucket-name
 MAINTAINER_EMAIL=you@example.org
 RACK_ENV=production
+PORT=80
 EOF
 docker pull dock0/amylum
 docker run -d -p 80:80 --env-file=env_file dock0/amylum
 ```
 
-If you want to use SSL, add "SSL_DIR=/opt/ssl" to the env file, swap 80 for 443 in the docker command, and add "-v /path/to/your/ssl/files:/opt/ssl" to the docker command. The expected SSL files are "cert" and "key", contents as described.
+If you want to use SSL, add "SSL_DIR=/opt/ssl" to the env file, swap 80 for 443 in the docker command and env file, and add "-v /path/to/your/ssl/files:/opt/ssl" to the docker command. The expected SSL files are "cert" and "key", contents as described.
 
 ## License
 
