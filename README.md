@@ -14,6 +14,8 @@ AWS_ACCESS_KEY_ID=your-access-key
 AWS_SECRET_ACCESS_KEY=your-secret-key
 AWS_REGION=your-region
 S3_BUCKET=your-bucket-name
+MAINTAINER_EMAIL=you@example.org
+RACK_ENV=production
 EOF
 docker pull dock0/amylum
 docker run -d -p 80:80 --env-file=env_file dock0/amylum
