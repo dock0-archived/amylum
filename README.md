@@ -21,6 +21,8 @@ docker pull dock0/amylum
 docker run -d -p 80:80 --env-file=env_file dock0/amylum
 ```
 
+If you want to use SSL, add "SSL_DIR=/opt/ssl" to the env file, swap 80 for 443 in the docker command, and add "-v /path/to/your/ssl/files:/opt/ssl" to the docker command. The expected SSL files are "cert" and "key", contents as described.
+
 ## License
 
 This repo is released under the MIT License. See the bundled LICENSE file for details.
