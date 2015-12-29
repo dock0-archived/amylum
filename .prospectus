@@ -1,0 +1,13 @@
+item do
+  name 'amylum::submodule'
+
+  expected do
+    github_hash
+    repo 'amylum/server'
+  end
+
+  actual do
+    git_hash
+    dir 'source'
+  end
+end
