@@ -1,3 +1,5 @@
+**Inactive Project:** I've stopped using this project in favor of deploying this via Heroku and AWS
+
 dock0/amylum
 =======
 
